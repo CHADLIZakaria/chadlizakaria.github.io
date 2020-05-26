@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+:root {
+  --main-color: #00a8ff;
+}
+/* Start header */
+header {
+  background-image: url("../img/background_header.jpg");
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+header .overlay {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+  color: #fff;
+  font-size: 20px;
+  z-index: 3;
+  position: relative;
+  padding: 20px 0;
+}
+
+header nav .container {
+  display: flex;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+header nav ul li {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3 linear;
+}
+header nav ul li:hover {
+  color: var(--main-color);
+}
+
+header .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #fff;
+}
+header .text span {
+  color: var(--main-color);
+}
+
+header .text h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+header .text p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+/* Start qui suis je */
+.qui-suis-je {
+  padding: 30px 0;
+}
+.qui-suis-je h3 {
+  font-style: italic;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.qui-suis-je .content {
+  display: flex;
+  align-items: center;
+}
+.qui-suis-je .content p {
+  width: calc(100% - 200px);
+}
+
+.qui-suis-je .content .image {
+  width: 100px;
+  margin-right: 100px;
+}
+
+.qui-suis-je .content .image img {
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.qui-suis-je .timeline:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  display: block;
+}
+
+.qui-suis-je .timeline .top {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+.qui-suis-je .timeline .top p {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: var(--main-color);
+  padding: 5px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.qui-suis-je .timeline .text {
+  display: inline-block;
+  background-color: #f5f6fa;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.qui-suis-je .timeline .text:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent #f5f6fa transparent;
+}
+/* Start competence */
+.competences {
+  background-color: #eee;
+  padding: 30px 0;
+}
+.competences > h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.competences .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.competences .competence {
+  width: 32.33%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #ccc;
+  padding: 10px;
+  transition: all 0.3s linear;
+}
+
+.competences .competence:hover {
+  box-shadow: 5px 10px var(--main-color);
+}
+.competences .competence h3 {
+  text-align: center;
+  border-bottom: 2px solid #3d434f;
+  padding: 10px 0;
+}
+
+.competences .competence ul {
+  list-style: none;
+  padding: 10px;
+  align-items: baseline;
+  margin-left: 20px;
+}
+
+.competences .competence ul li {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.competences .competence ul li ul {
+  padding-top: 0;
+}
+.competences .competence li .icon {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+}
+.competences .competence li .icon img {
+  width: 100%;
+  height: 100%;
+  margin: 0 4px;
+}
+
+.competences .competence li .icon.php {
+  height: max-content;
+}
+
+/* Start Projects */
+.projects {
+  padding: 20px 0;
+}
+
+/* Start Info  */
+.info {
+  padding: 40px 0;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.info .container {
+  position: relative;
+}
+.info .container:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ccc;
+  width: 2px;
+  height: 100%;
+}
+
+.info .alt {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.info .alt:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.info h3 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  color: #3d434f;
+  color: #3d434f;
+}
+
+.info .alt p {
+  width: 70%;
+  color: #b1b1b1;
+}
+
+.info .alt p .icon a {
+  color: #000;
+  font-size: 20px;
+  margin-right: 20px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.info .alt p .icon a:hover {
+  color: var(--main-color);
+}
+
+/* Start Settings */
+.settings {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  background-color: #222;
+  z-index: 9999;
+  padding: 20px 0;
+  left: -200px;
+  transition: all 0.5s linear;
+}
+.settings.show {
+  left: 0;
+}
+.settings .color-options {
+  padding: 10px 0;
+  text-align: center;
+}
+.settings .color-options h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.settings .color-options span {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.settings .color-options span.active {
+  opacity: 1;
+}
+.settings .color-options span:first-of-type {
+  background-color: #00a8ff;
+}
+.settings .color-options span:nth-of-type(2) {
+  background-color: #0097e6;
+}
+
+.settings .color-options span:nth-of-type(3) {
+  background-color: #9c88ff;
+}
+.settings .color-options span:last-of-type {
+  background-color: #8c7ae6;
+}
+
+.settings .color-options .icon {
+  position: absolute;
+  right: -35px;
+  top: 50px;
+  color: #fff;
+  font-size: 25px;
+  background-color: var(--main-color);
+  padding: 5px;
+  cursor: pointer;
+}
